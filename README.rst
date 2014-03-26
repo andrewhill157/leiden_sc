@@ -55,6 +55,16 @@ The class ```VariantRemapper``` in ```macarthur_core/remapping/remapping.py``` w
 Unfortunately, the third-party tool depends on two relatively large files that I cannot easily host on github. These are normally housed in a folder called resources within the module. One is a human genome reference sequence (```macarthur_core/remapping/resources/hg19.fa```) and the other is a file containing definitions of transcript sequences that are needed to facilitate conversion between the HGVS and VCF 
 (```macarthur_core/remapping/resources/genes.refSeq```). These two files are hosted at: http://www.broadinstitute.org/~ahill. Note that the files will need to decompressed using gunzip and placed in ```macarthur_core/remapping/resources/```. The first time these functions are used, two additional files will be generated (takes some time). Subsequent runs will not require this process to be repeated. 
 
+## io
+
+### macarthur_core/io/file_io.py
+This module has functions for reading and writing delimited files to and from 2D lists where first dimension is rows and
+the second is columns. It also contains a function for formatting output text for a file format called <a href='http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41'>VCF</a> from a 2D
+list of data.
+
+### macarthur_core/io/web_io.py
+This module has functions for reading HTML data from URLs.
+
 # Scripts
 
 I have included several scripts that I use to extract, remap, and validate data from LOVD databases. 
